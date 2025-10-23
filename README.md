@@ -21,16 +21,18 @@ This project implements an end-to-end serverless data analytics pipeline on AWS 
 
 6.Python / PySpark – Data transformation scripts
 ## Data Flow:
-Spotify Data → S3 (Staging) → AWS Glue ETL → S3 (DW) → AWS Glue Crawler → Amazon Athena → Amazon QuickSight
+Spotify Data → S3 (land) → AWS Glue ETL → S3 (final) → AWS Glue Crawler → Amazon Athena → Amazon QuickSight
 
 <img width="1754" height="816" alt="image" src="https://github.com/user-attachments/assets/e3bfe70a-6614-44e1-a16d-631d3d9a5200" />
 
 
 
-## 1. Amazon S3 (Staging)
+## 1. Amazon S3 (landing)
 
-Raw Spotify data (e.g., album, track info, artists, and streams) is ingested and stored in a staging S3 bucket.
+Raw Spotify data (e.g., album, track info, artists, and streams) is ingested and stored in a landing S3(SVMHA_land) bucket.
 This serves as the data landing zone for all raw datasets.
+<img width="1701" height="564" alt="image" src="https://github.com/user-attachments/assets/e6b3dde8-621c-4441-8616-990973e7a232" />
+
 ## 2. AWS Glue ETL
 
 Glue ETL jobs clean, transform, and enrich the raw Spotify data —
@@ -38,7 +40,10 @@ Glue ETL jobs clean, transform, and enrich the raw Spotify data —
 for example:  
 Normalizing column names and data types
 Joining with metadata such as artist or album information
-The transformed and processed data is written to the S3 Data Warehouse (DW) bucket in optimized formats (e.g., Parquet) for better performance and cost efficiency.
+The transformed and processed data is written to the S3 Final(SVMHA_Final) bucket in optimized formats (e.g., Parquet) for better performance and cost efficiency.
+
+<img width="1701" height="564" alt="image" src="https://github.com/user-attachments/assets/60dc2323-3826-4b3d-930a-55fe1a35e9db" />
+
 ## 3. AWS Glue Crawler
 
 The crawler automatically scans the transformed data stored in S3 DW and updates the AWS Glue Data Catalog.
