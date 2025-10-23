@@ -23,6 +23,9 @@ This project implements an end-to-end serverless data analytics pipeline on AWS 
 ## Data Flow:
 Spotify Data → S3 (Staging) → AWS Glue ETL → S3 (DW) → AWS Glue Crawler → Amazon Athena → Amazon QuickSight
 
+![Uploading image.png…]()
+
+
 ## 1. Amazon S3 (Staging)
 
 Raw Spotify data (e.g., album, track info, artists, and streams) is ingested and stored in a staging S3 bucket.
