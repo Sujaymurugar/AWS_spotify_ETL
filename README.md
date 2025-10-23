@@ -1,4 +1,4 @@
-
+<img width="1754" height="816" alt="image" src="https://github.com/user-attachments/assets/57fe41f5-9c72-4e71-b0c3-95c0a9e856f5" />
 # AWS_spotify_ETL
 
 
@@ -23,7 +23,8 @@ This project implements an end-to-end serverless data analytics pipeline on AWS 
 ## Data Flow:
 Spotify Data → S3 (Staging) → AWS Glue ETL → S3 (DW) → AWS Glue Crawler → Amazon Athena → Amazon QuickSight
 
-![Uploading image.png…]()
+<img width="1754" height="816" alt="image" src="https://github.com/user-attachments/assets/e3bfe70a-6614-44e1-a16d-631d3d9a5200" />
+
 
 
 ## 1. Amazon S3 (Staging)
