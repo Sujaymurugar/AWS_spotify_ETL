@@ -46,12 +46,18 @@ The transformed and processed data is written to the S3 Final(SVMHA_Final) bucke
 
 ## 3. AWS Glue Crawler
 
-The crawler automatically scans the transformed data stored in S3 DW and updates the AWS Glue Data Catalog.
+The crawler automatically scans the transformed data stored in S3 final and updates the AWS Glue Data Catalog.
+
+<img width="1701" height="564" alt="image" src="https://github.com/user-attachments/assets/868fe151-fc76-424a-962a-fda9f8abea6d" />
+
 This process creates or updates schema and table definitions, enabling easy querying via Athena.
 ## 4. Amazon Athena
 
 A serverless query engine that allows running SQL queries directly on data stored in S3.
 Athena uses the Glue Data Catalog as its metadata layer to provide a structured view of the data.
+
+<img width="1717" height="687" alt="image" src="https://github.com/user-attachments/assets/76d40638-9718-4cc2-ae1b-3b897997246b" />
+
 ## 5. Amazon QuickSight
 
 A business intelligence (BI) and visualization tool connected to Athena.
