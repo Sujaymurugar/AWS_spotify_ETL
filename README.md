@@ -1,4 +1,4 @@
-<img width="1754" height="816" alt="image" src="https://github.com/user-attachments/assets/57fe41f5-9c72-4e71-b0c3-95c0a9e856f5" />
+
 # AWS_spotify_ETL
 
 
